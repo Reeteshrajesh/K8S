@@ -1,7 +1,3 @@
-Here’s a **`README.md`** file with everything included:
-
----
-
 # **🚀 Three-Tier Application on Kubernetes**
 
 This project deploys a **three-tier application** (Frontend, Backend, Database) on **Kubernetes** using **Kustomize**.
