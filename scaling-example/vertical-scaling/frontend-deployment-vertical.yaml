@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend-deployment
+  labels:
+    app: frontend
+spec:
+  replicas: 2 # Keeping replicas low, focusing on high-resource pods
+  selector:
+    matchLabels:
+      app: frontend
+  template:
+    metadata:
+      labels:
+        app: frontend
+    spec:
+      containers:
+        - name: frontend
+          image: <your-dockerhub-username>/frontend:latest # Replace with your Docker image
+          ports:
+            - containerPort: 3000
+          resources:
+            requests:
+              cpu: "500m" # Minimum 0.5 CPU
+              memory: "512Mi" # Minimum 512MB RAM
+            limits:
+              cpu: "1" # Maximum 1 CPU
+              memory: "1Gi" # Maximum 1GB RAM
