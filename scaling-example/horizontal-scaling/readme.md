@@ -1,6 +1,3 @@
-## **📜 Horizontal Scaling README (`horizontal-scaling/README.md`)**
-
-````markdown
 # 🚀 Horizontal Scaling in Kubernetes
 
 ## **📌 What is Horizontal Scaling?**
@@ -37,7 +34,6 @@ spec:
           ports:
             - containerPort: 3000
 ```
-````
 
 ---
 
